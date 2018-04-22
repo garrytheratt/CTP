@@ -1,0 +1,91 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: #000;
+    font-family: proxima-nova;
+    color: #FFF;
+}
+
+.logheader {
+    position: absolute;
+    width: 100%;
+    z-index: top;
+    top: 0;
+}
+
+
+.nav {
+    position: absolute;
+    margin: 62px 0 0 160px;
+}
+
+.nav a {
+    margin-left: 40px;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+    text-decoration: none;
+    font-size: 15.5px;
+
+    color: #FFF;
+    -webkit-transition: color 1s;
+        -moz-transition:    color 1s;
+        -ms-transition:     color 1s;
+        -o-transition:      color 1s;
+        transition:         color 1s;
+}
+
+.nav a:hover{
+    color: #F9C0C0;
+}
+
+#logo {
+    margin: 30px 0 0 60px;
+    width: 90px;
+    height: 90px;
+    vertical-align: middle;
+}
+
+.fullscreen-bg {
+    position: absolute;
+    width: 100%;
+    top: -1000px;
+    bottom: -1000px;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+	  margin-right: auto;
+	  display: block;
+}
+
+.instruct{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: -99;
+  width: 265px;
+  height:624px;
+  margin-top: -342px;
+  margin-left: -132.5px;
+
+  -webkit-animation-duration: 8s;animation-duration: 8s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+
+@keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+
+#instructions {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}

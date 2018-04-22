@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title> MENS DEPRESSION </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="https://use.typekit.net/sdi1apo.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="./three.js-master/build/three.min.js"></script>
+    <script type="text/javascript" src="./three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
+    <script type="text/javascript" src="./three.js-master/examples/js/renderers/Projector.js"></script>
+    <script type="text/javascript" src="./Rotation.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div class="logheader">
+  <a href="index.html"> <img src="logo.png" id="logo"> </a>
+</div>
+
+
+<div class="nav">
+  <a id="nav1" href="info.html">MORE INFO</a>
+  <a id="nav2" href="about.html">ABOUT</a>
+  <a id="mute" class="sound" href="#">AUDIO ON</a>
+</div>
+
+<img id="instructions" class="instruct" src="instructions.png">
+
+<div class="fullscreen-bg">
+    <video preload loop muted class="fullscreen-bg__video" id="v0" tabindex="0">
+        <source src="hell.mp4" type="video/mp4">
+    </video>
+</div>
+
+<audio id="audio" preload loop autoplay="autoplay">
+  <source src="sound.mp3" />
+</audio>
+<script>
+var audio = document.getElementById('audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+</script>
+<script>
+        $(".sound").click(function () {
+            $(this).text(function(i, v){
+               return v === 'AUDIO ON' ? 'AUDIO OFF' : 'AUDIO ON'
+            })
+        });
+</script>
+
+
+</body>
+</html>
